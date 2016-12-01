@@ -1,0 +1,13 @@
+# change the list strings to the desired DNA sequences
+sequences = ["CGTGAT", "ACATCG", "GCCTAA", "TGGTCA", "CACTGT", "ATTGGC", "GATCTG"]
+
+def reverse_complement(seq):
+    seq_dict = {'A':'T','T':'A','G':'C','C':'G'}
+    return "".join([seq_dict[base] for base in reversed(seq)])
+
+counter = 0
+for i in sequences:
+    counter += 1
+    print counter, " input: ", i
+    print "rev comp: ", reverse_complement(i)
+    print ""
